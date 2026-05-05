@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect } from "react"
 
 function useFadeIn() {
   useEffect(() => {
@@ -15,20 +15,8 @@ function useFadeIn() {
   }, [])
 }
 
-function scrollTo(id: string) {
-  document.querySelector(id)?.scrollIntoView({ behavior: "smooth" })
-}
-
 export default function Index() {
   useFadeIn()
-  const [submitted, setSubmitted] = useState(false)
-  const nameRef = useRef<HTMLInputElement>(null)
-  const contactRef = useRef<HTMLInputElement>(null)
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
 
   const marqueeText = "Живые встречи · каждые 2 недели · для всех"
   const marqueeItems = Array(8).fill(marqueeText)
@@ -79,8 +67,7 @@ export default function Index() {
             <div className="pain-card">Теряешься, когда нужно ответить быстро и живо</div>
             <div className="pain-card">Хочешь быть интереснее в разговоре, но «включается» всё это только потом</div>
             <div className="pain-card">Скованность уходит лишь к концу вечера — когда уже все расходятся</div>
-            <div className="pain-card">Думаешь «ляпну глупость» — и молчишь</div>
-            <div className="pain-card">Встречи с людьми дают энергию, но сам ты «не раскрываешься»</div>
+
           </div>
           <p className="pain-closing fade-in">
             Импровизация не учит притворяться кем-то другим.<br />
