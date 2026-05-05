@@ -239,7 +239,6 @@ export default function Index() {
               <div className="about-name">Елена Орехова</div>
               <div className="about-role">Ведущая встреч по импровизации</div>
               <div className="about-facts">
-                <div className="about-fact">Импровизация — это терапия через игру.</div>
                 <div className="about-fact">Умение общаться и выступать — это навык, а не талант. И я знаю, как его развить.</div>
                 <div className="about-fact">Гибкость, креативность и умение быстро адаптироваться — валюта нового времени.</div>
               </div>
