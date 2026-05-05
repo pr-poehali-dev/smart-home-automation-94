@@ -185,11 +185,7 @@ export default function Index() {
                   <div className="company-title">День рождения / встреча</div>
                   <p className="company-text">Вместо «поели-поговорили» — живое, смешное, запоминающееся. Гости — авторы вечера.</p>
                 </div>
-                <div className="company-card">
-                  <div className="company-icon">🥂</div>
-                  <div className="company-title">Корпоратив</div>
-                  <p className="company-text">Не банальный тимбилдинг. Вечер, после которого коллеги смотрят друг на друга иначе.</p>
-                </div>
+
               </div>
               <button className="btn-primary" onClick={() => scrollTo("#cta-final")}>Написать и обсудить формат →</button>
             </div>
