@@ -238,14 +238,10 @@ export default function Index() {
             <div>
               <div className="about-name">Елена Орехова</div>
               <div className="about-role">Ведущая встреч по импровизации</div>
-              <p className="about-text"><span className="tariff-placeholder">[Расскажи о себе: откуда импровизация в твоей жизни, почему тебе важно это делать]</span></p>
-              <p className="about-text" style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "1.1rem", color: "var(--text)" }}>
-                «Я веду эти встречи потому что… <span className="tariff-placeholder">[продолжение]</span>»
-              </p>
               <div className="about-facts">
-                <div className="about-fact"><span className="tariff-placeholder">[Факт 1 о себе]</span></div>
-                <div className="about-fact"><span className="tariff-placeholder">[Факт 2 о себе]</span></div>
-                <div className="about-fact"><span className="tariff-placeholder">[Факт 3 — неожиданный]</span></div>
+                <div className="about-fact">Импровизация — это терапия через игру.</div>
+                <div className="about-fact">Умение общаться и выступать — это навык, а не талант. И я знаю, как его развить.</div>
+                <div className="about-fact">Гибкость, креативность и умение быстро адаптироваться — валюта нового времени.</div>
               </div>
             </div>
           </div>
