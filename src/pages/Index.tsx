@@ -35,7 +35,7 @@ export default function Index() {
       {/* NAV */}
       <nav className="imp-nav">
         <div className="nav-logo">Импровизация</div>
-        <button className="nav-cta" onClick={() => scrollTo("#cta-final")}>Записаться</button>
+        <a className="nav-cta" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">Записаться</a>
       </nav>
 
       {/* HERO */}
@@ -50,9 +50,9 @@ export default function Index() {
           <p className="hero-sub fade-in">
             Импровизация — это игра, в которую невозможно прийти неподготовленным. Здесь нет правильных ответов. Есть только момент — и то, что ты в него принесёшь.
           </p>
-          <button className="btn-primary fade-in" onClick={() => scrollTo("#cta-final")}>
+          <a className="btn-primary fade-in" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">
             Записаться на ближайшую встречу →&nbsp;15 мая · 1 000 ₽
-          </button>
+          </a>
         </div>
       </section>
 
@@ -165,7 +165,7 @@ export default function Index() {
               <p style={{ marginBottom: "1rem", fontSize: "0.9rem", color: "var(--muted)" }}>
                 📆 15 мая · Светланская 33/2
               </p>
-              <button className="btn-primary" onClick={() => scrollTo("#cta-final")}>Записаться →</button>
+              <a className="btn-primary" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">Записаться →</a>
 
             </div>
             <div className="tariff-card">
@@ -187,7 +187,7 @@ export default function Index() {
                 </div>
 
               </div>
-              <button className="btn-primary" onClick={() => scrollTo("#cta-final")}>Написать и обсудить формат →</button>
+              <a className="btn-primary" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">Написать и обсудить формат →</a>
             </div>
           </div>
         </div>
@@ -262,7 +262,7 @@ export default function Index() {
             </h2>
 
             <div style={{ marginTop: "1.5rem" }} className="fade-in">
-              <button className="btn-primary stretch">Записаться →</button>
+              <a className="btn-primary stretch" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">Записаться →</a>
             </div>
           </div>
         </div>
