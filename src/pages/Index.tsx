@@ -229,8 +229,7 @@ export default function Index() {
       {/* О ВЕДУЩЕМ */}
       <section id="about" className="imp-section">
         <div className="container-imp">
-          <p className="section-label fade-in">Ведущий</p>
-          <h2 className="section-title fade-in">Кто проводит</h2>
+
           <div className="about-grid fade-in">
             <div className="about-photo">
               <img src="https://cdn.poehali.dev/projects/13b0f725-9de0-4f7a-9e7b-95c3b58756f7/bucket/6930c495-773f-47b4-acb7-24ece975a7ac.jpg" alt="Елена Орехова" />
