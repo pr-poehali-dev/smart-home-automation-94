@@ -46,7 +46,6 @@ export default function Index() {
 
       {/* NAV */}
       <nav className="imp-nav">
-        <div className="nav-logo">Импровизация</div>
         <a className="nav-cta" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">Записаться</a>
       </nav>
 
