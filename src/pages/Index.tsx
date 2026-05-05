@@ -259,26 +259,7 @@ export default function Index() {
               Следующая встреча —<br />
               <em>15 мая</em>
             </h2>
-            <p style={{ color: "var(--muted)", marginBottom: "0.5rem" }} className="fade-in">
-              Оставь имя и контакт — я пришлю адрес и все детали.
-            </p>
-            <form className="form-imp fade-in" onSubmit={handleSubmit}>
-              <div className="form-group-imp">
-                <label className="form-label-imp" htmlFor="name">Имя</label>
-                <input ref={nameRef} className="form-input-imp" type="text" id="name" placeholder="Как тебя зовут?" required />
-              </div>
-              <div className="form-group-imp">
-                <label className="form-label-imp" htmlFor="contact">Телефон или Telegram</label>
-                <input ref={contactRef} className="form-input-imp" type="text" id="contact" placeholder="+7 или @username" required />
-              </div>
-              <button
-                type="submit"
-                className={`btn-primary stretch${submitted ? " success" : ""}`}
-                disabled={submitted}
-              >
-                {submitted ? "✓ Заявка отправлена!" : "Хочу прийти →"}
-              </button>
-            </form>
+
             <p className="cta-meta fade-in">1 000 ₽ · Живая встреча · Без подготовки · Места ограничены</p>
           </div>
         </div>
