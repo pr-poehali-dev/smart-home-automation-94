@@ -230,7 +230,7 @@ export default function Index() {
           <h2 className="section-title fade-in">Кто проводит</h2>
           <div className="about-grid fade-in">
             <div className="about-photo">
-              <span>[ Живое фото<br />в процессе ]</span>
+              <img src="https://cdn.poehali.dev/projects/13b0f725-9de0-4f7a-9e7b-95c3b58756f7/bucket/6930c495-773f-47b4-acb7-24ece975a7ac.jpg" alt="Елена Орехова" />
             </div>
             <div>
               <div className="about-name">Елена Орехова</div>
