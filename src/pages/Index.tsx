@@ -121,10 +121,7 @@ export default function Index() {
               <div className="skill-chip" key={s}>{s}</div>
             ))}
           </div>
-          <p className="skills-closing fade-in">
-            Это не тренинг по публичным выступлениям.<br />
-            Это один из лучших способов развить креативность и раскрепощённость.
-          </p>
+
         </div>
       </section>
 
