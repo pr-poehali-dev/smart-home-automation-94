@@ -247,13 +247,14 @@ export default function Index() {
       <section id="cta-final" className="imp-section">
         <div className="container-imp">
           <div className="cta-final-inner">
-            <p className="section-label fade-in">Запись</p>
             <h2 className="section-title fade-in">
               Следующая встреча —<br />
               <em>15 мая</em>
             </h2>
-
             <p className="cta-meta fade-in">1 000 ₽ · Живая встреча · Без подготовки · Места ограничены</p>
+            <div style={{ marginTop: "1.5rem" }} className="fade-in">
+              <button className="btn-primary stretch">Записаться →</button>
+            </div>
           </div>
         </div>
       </section>
