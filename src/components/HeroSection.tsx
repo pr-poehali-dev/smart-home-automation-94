@@ -1,37 +1,17 @@
 import { LiquidButton } from "@/components/ui/liquid-glass-button"
-import { Menu, ChevronLeft, ChevronRight, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { motion } from "framer-motion"
 
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const slides = [
-    {
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j46TPXDHzpn3M65wMva3qHPNhwokYn.png",
-      alt: "Группа бегунов в движении",
-    },
-    {
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-oH2K0gw1HEqvYhhbwJrYbmkBrbksyk.png",
-      alt: "Бегунья с эффектом размытия",
-    },
-    {
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-DQ2brNc5Vszxllx17YNA6JqGqiHaRm.png",
-      alt: "Бегун во главе группы",
-    },
-  ]
-
   const navItems = [
-    { name: "Главная", href: "#hero" },
-    { name: "Миссия", href: "#mission" },
-    { name: "Сообщество", href: "#community" },
+    { name: "О нас", href: "#mission" },
+    { name: "Как это работает", href: "#community" },
     { name: "Отзывы", href: "#testimonials" },
-    { name: "Вступить", href: "#join" },
+    { name: "Записаться", href: "#join" },
   ]
-
-  // Navigation handlers
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length)
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
@@ -42,140 +22,137 @@ export default function HeroSection() {
   }
 
   return (
-    <div id="hero" className="relative h-screen w-full overflow-hidden bg-black">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
-        style={{
-          backgroundImage: `url('${slides[currentSlide].image}')`,
-        }}
-      >
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
+    <div id="hero" className="relative min-h-screen w-full overflow-hidden" style={{ background: "#0d0b0f" }}>
+      {/* Ambient light effects */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none"
+        style={{ background: "radial-gradient(circle, #f0a14a 0%, transparent 70%)" }} />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl opacity-15 pointer-events-none"
+        style={{ background: "radial-gradient(circle, #e05c3a 0%, transparent 70%)" }} />
 
       {/* Navigation */}
-      <nav className="relative z-20 flex items-center justify-between p-6 md:p-8">
-        {/* Logo/Brand */}
-        <div className="text-white font-bold text-xl tracking-wider">STRIDE</div>
+      <nav className="relative z-20 flex items-center justify-between px-6 py-6 md:px-10 md:py-8">
+        <div className="font-display text-white font-bold text-xl tracking-wide" style={{ color: "#f0a14a" }}>
+          ИМПРО
+        </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
-              className="relative text-white hover:text-gray-300 transition-colors duration-300 font-medium tracking-wide pb-1 group"
+              className="text-sm font-medium tracking-wide transition-colors duration-300 pb-0.5 border-b border-transparent hover:border-current"
+              style={{ color: "#e8e4df" }}
             >
               {item.name}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
             </button>
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white hover:text-gray-300 transition-colors"
+          className="md:hidden transition-colors"
+          style={{ color: "#e8e4df" }}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          <span className="sr-only">Меню</span>
         </button>
       </nav>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="absolute top-0 left-0 w-full h-full bg-black/90 z-30 md:hidden">
-          <div className="flex flex-col items-center justify-center h-full space-y-8">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-white text-2xl font-bold tracking-wider hover:text-gray-300 transition-colors duration-300"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
+        <div className="absolute inset-0 z-30 md:hidden flex flex-col items-center justify-center gap-8"
+          style={{ background: "rgba(13, 11, 15, 0.97)" }}>
+          <button className="absolute top-6 right-6" style={{ color: "#e8e4df" }} onClick={() => setIsMenuOpen(false)}>
+            <X size={24} />
+          </button>
+          {navItems.map((item) => (
+            <button
+              key={item.name}
+              onClick={() => scrollToSection(item.href)}
+              className="font-display text-2xl font-bold tracking-wide transition-colors duration-300"
+              style={{ color: "#e8e4df" }}
+            >
+              {item.name}
+            </button>
+          ))}
         </div>
       )}
 
-      {/* Hero Content */}
-      <div className="relative z-10 flex h-full items-center justify-center px-6">
-        <div className="text-center text-white max-w-4xl">
-          {/* Main Title */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-wider mb-4 leading-none">
-            STRIDE
+      {/* Hero content */}
+      <div className="relative z-10 flex min-h-[calc(100vh-88px)] items-center justify-center px-6 pb-16">
+        <div className="text-center max-w-4xl mx-auto">
+          {/* Eyebrow */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="text-sm md:text-base font-medium tracking-widest uppercase mb-8"
+            style={{ color: "#f0a14a" }}
+          >
+            Живые встречи · каждые 2 недели · для всех
+          </motion.p>
+
+          {/* Main title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="font-display text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6"
+            style={{ color: "#e8e4df" }}
+          >
+            Ничего не готовь.
             <br />
-            COLLECTIVE
-          </h1>
+            <span style={{
+              background: "linear-gradient(135deg, #f0a14a 0%, #e05c3a 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text"
+            }}>
+              Просто приходи.
+            </span>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl font-light tracking-wide mb-8 text-gray-200">Беговое сообщество</p>
-
-          {/* CTA Button - Now using LiquidButton */}
-          <LiquidButton
-            size="xxl"
-            className="font-semibold text-lg tracking-wide"
-            onClick={() => scrollToSection("#join")}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-10 max-w-2xl mx-auto"
+            style={{ color: "#b8b0a8" }}
           >
-            Присоединиться
-          </LiquidButton>
-        </div>
-      </div>
+            Импровизация — это игра, в которую невозможно прийти неподготовленным.
+          </motion.p>
 
-      {/* Slider Navigation */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="flex items-center space-x-4">
-          {/* Previous Arrow */}
-          <button
-            onClick={prevSlide}
-            className="text-white hover:text-gray-300 transition-colors p-2"
-            aria-label="Предыдущий слайд"
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <ChevronLeft size={24} />
-          </button>
-
-          {/* Slide Indicators */}
-          <div className="flex space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  currentSlide === index ? "bg-white" : "bg-white/40 hover:bg-white/60"
-                }`}
-                aria-label={`Перейти к слайду ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Next Arrow */}
-          <button
-            onClick={nextSlide}
-            className="text-white hover:text-gray-300 transition-colors p-2"
-            aria-label="Следующий слайд"
-          >
-            <ChevronRight size={24} />
-          </button>
-        </div>
-      </div>
-
-      {/* Side Navigation Indicators */}
-      <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-20 hidden md:block">
-        <div className="flex flex-col space-y-3">
-          {slides.map((_, index) => (
             <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-1 h-8 transition-all duration-300 ${
-                currentSlide === index ? "bg-white" : "bg-white/40 hover:bg-white/60"
-              }`}
-              aria-label={`Слайд ${index + 1}`}
-            />
-          ))}
+              onClick={() => scrollToSection("#join")}
+              className="px-10 py-4 text-base font-semibold tracking-wide rounded-full transition-all duration-300 hover:scale-105 hover:opacity-90"
+              style={{
+                background: "linear-gradient(135deg, #f0a14a 0%, #e05c3a 100%)",
+                color: "#0d0b0f"
+              }}
+            >
+              Записаться на встречу
+            </button>
+            <button
+              onClick={() => scrollToSection("#mission")}
+              className="px-10 py-4 text-base font-medium tracking-wide rounded-full border transition-all duration-300 hover:opacity-80"
+              style={{ borderColor: "rgba(232,228,223,0.3)", color: "#e8e4df" }}
+            >
+              Узнать больше
+            </button>
+          </motion.div>
         </div>
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+        style={{ background: "linear-gradient(to bottom, transparent, #0d0b0f)" }} />
     </div>
   )
 }

@@ -5,147 +5,112 @@ import { cn } from "@/lib/utils"
 
 const SQRT_5000 = Math.sqrt(5000)
 
-// Running club testimonials data with randomly generated icons
+// Improv club testimonials
 const testimonials = [
   {
     tempId: 0,
     testimonial:
-      "Stride Collective изменил мою жизнь. От попыток пробежать 5 минут до первого марафона — это сообщество верило в меня, когда я сам в себя не верил.",
-    by: "Сергей Иванов, марафонец",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SergeyIvanov&backgroundColor=3b82f6&textColor=ffffff",
+      "Я пришла совершенно случайно — подруга затащила. Ушла через два часа с ощущением, что что-то внутри разморозилось. Пришла снова на следующей встрече.",
+    by: "Катя, дизайнер",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=KatyaD&backgroundColor=e05c3a&textColor=ffffff",
   },
   {
     tempId: 1,
     testimonial:
-      "Я боялась присоединиться к беговой группе, но Stride Collective встретил меня с распростертыми объятиями. Теперь у меня друзья на всю жизнь и уверенность достигать любых целей.",
-    by: "Марина Петрова, трейлраннер",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MarinaPetrova&backgroundColor=10b981&textColor=ffffff",
+      "Я очень серьёзный человек по жизни. Импро научило меня не воспринимать себя так всерьёз. Это дороже любого тренинга по личностному росту.",
+    by: "Максим, финансист",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MaximF&backgroundColor=f0a14a&textColor=ffffff",
   },
   {
     tempId: 2,
     testimonial:
-      "Энергетика на пробежках Stride Collective заразительна. Быстрый ты или медленный — все болеют за тебя. Здесь не соревнование, здесь сообщество.",
-    by: "Анна Козлова, любитель 5К",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AnnaKozlova&backgroundColor=8b5cf6&textColor=ffffff",
+      "Мне 47 лет, я никогда не стоял на сцене. На третьей встрече я сыграл говорящего кота — и это был один из лучших вечеров в моей жизни.",
+    by: "Игорь, врач",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=IgorD&backgroundColor=8b5cf6&textColor=ffffff",
   },
   {
     tempId: 3,
     testimonial:
-      "После лет одиночных пробежек Stride Collective стал для меня открытием. Групповые тренировки помогли выйти на личные рекорды, о которых я и мечтать не мог.",
-    by: "Дмитрий Смирнов, спринтер",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DmitrySmirnov&backgroundColor=ef4444&textColor=ffffff",
+      "После первой встречи я заметила, что стала лучше слушать людей на работе. Импро — это практика внимания, а не просто игра.",
+    by: "Лена, менеджер проектов",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=LenaPM&backgroundColor=10b981&textColor=ffffff",
   },
   {
     tempId: 4,
     testimonial:
-      "Stride Collective научил меня, что бег — это не просто тренировка. Это терапия, дружба и приключение в одном флаконе. Этот клуб спас мое ментальное здоровье.",
-    by: "Елена Новикова, осознанный бегун",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=ElenaNovikova&backgroundColor=f59e0b&textColor=ffffff",
+      "Я интроверт. Думал, это не для меня. Оказалось — именно для меня. Структура игр даёт безопасность, внутри которой можно рискнуть.",
+    by: "Андрей, программист",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AndreyP&backgroundColor=6366f1&textColor=ffffff",
   },
   {
     tempId: 5,
     testimonial:
-      "От дивана до 10К за 6 месяцев с поддержкой Stride Collective. Они принимают тебя таким, какой ты есть, и помогают понять, куда ты можешь дойти. Настоящая магия.",
-    by: "Алексей Морозов, история успеха",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlexeyMorozov&backgroundColor=6366f1&textColor=ffffff",
+      "Я боялась быть смешной — в плохом смысле. Оказалось, смеяться вместе — это совсем другое. Это связывает людей, а не разъединяет.",
+    by: "Оля, учительница",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=OlyaT&backgroundColor=ec4899&textColor=ffffff",
   },
   {
     tempId: 6,
     testimonial:
-      "Рассветные пробежки со Stride Collective — это духовный опыт. Есть что-то мощное в том, чтобы двигаться вместе, пока мир просыпается вокруг нас.",
-    by: "Айгуль Рахимова, рассветный патруль",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AigulRahimova&backgroundColor=ec4899&textColor=ffffff",
+      "Каждая встреча — это как перезагрузка. Уходишь с работы с тяжёлой головой, приходишь на импро — и через 20 минут ты уже смеёшься и забыл, что устал.",
+    by: "Даша, маркетолог",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DashaMK&backgroundColor=f97316&textColor=ffffff",
   },
   {
     tempId: 7,
     testimonial:
-      "Я вступила в Stride Collective после переезда в новый город. Нашла не только беговое племя, но и настоящую семью. Движение здесь — это образ жизни.",
-    by: "Ольга Ким, строитель сообщества",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=OlgaKim&backgroundColor=06b6d4&textColor=ffffff",
+      "Атмосфера на встречах — это что-то особенное. Ведущий создаёт пространство, где всё принимается. Буквально всё. Это редкость.",
+    by: "Вася, архитектор",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=VasyaA&backgroundColor=0891b2&textColor=ffffff",
   },
   {
     tempId: 8,
     testimonial:
-      "Stride Collective празднует каждую победу, даже самую маленькую. Мой первый километр ощущался как олимпийское золото с этой командой, болеющей за меня.",
-    by: "Наталья Соколова, герой первого км",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NataliyaSokolova&backgroundColor=f97316&textColor=ffffff",
+      "Пришла поработать с тревожностью перед публичными выступлениями. Через месяц выступала на конференции и почти не волновалась. Магия.",
+    by: "Настя, исследователь",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NastyaR&backgroundColor=84cc16&textColor=ffffff",
   },
   {
     tempId: 9,
     testimonial:
-      "Тренировочные планы в Stride Collective невероятные. Я прошел путь от еле добегающего 5К до квалификации на Бостонский марафон всего за два года.",
-    by: "Михаил Волков, Бостонский квалификант",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MikhailVolkov&backgroundColor=84cc16&textColor=ffffff",
+      "Здесь нет плохих ответов. Нет неправильных реакций. Это место, где тебя принимают таким, какой ты есть прямо сейчас — и это меняет всё.",
+    by: "Тоня, психолог",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=TonyaPS&backgroundColor=a855f7&textColor=ffffff",
   },
   {
     tempId: 10,
     testimonial:
-      "Что я люблю в Stride Collective — это разнообразие. Бегуны всех возрастов, с разным опытом и способностями объединяются одной страстью.",
-    by: "София Родригес, чемпион разнообразия",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SofiaRodriguez&backgroundColor=a855f7&textColor=ffffff",
+      "Я привела мужа — он скептик по натуре. После встречи он спрашивал: «Когда следующий раз?» Говорит, давно так не смеялся.",
+    by: "Марина, фотограф",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MarinaPH&backgroundColor=dc2626&textColor=ffffff",
   },
   {
     tempId: 11,
     testimonial:
-      "Дисциплина в Stride Collective не имеет равных. Когда знаешь, что твоя беговая семья ждет тебя — выходишь на пробежку несмотря ни на что.",
-    by: "Тимур Асланов, король постоянства",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=TimurAslanov&backgroundColor=059669&textColor=ffffff",
+      "Люди здесь разные — по возрасту, профессии, характеру. И именно это делает каждую сцену неожиданной. Ты никогда не знаешь, что будет дальше.",
+    by: "Коля, журналист",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=KolyaJN&backgroundColor=059669&textColor=ffffff",
   },
   {
     tempId: 12,
     testimonial:
-      "Трейловая группа Stride Collective открыла мне самые красивые места, о которых я и не знал. Бег стал моим способом исследовать мир.",
-    by: "Нина Павлова, исследователь троп",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NinaPavlova&backgroundColor=0ea5e9&textColor=ffffff",
+      "Я хожу уже полгода. Не пропустил ни одной встречи. Это стало ритуалом — важным якорем в расписании недели.",
+    by: "Антон, предприниматель",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AntonBZ&backgroundColor=2563eb&textColor=ffffff",
   },
   {
     tempId: 13,
     testimonial:
-      "Разговоры после пробежек в Stride Collective ценны не меньше самих пробежек. Мы решаем мировые проблемы километр за километром.",
-    by: "Роман Ким, философ бега",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=RomanKim&backgroundColor=dc2626&textColor=ffffff",
+      "На обычных тусовках я не знаю, о чём говорить. Здесь не нужно ни о чём говорить — нужно просто играть. И вдруг оказывается, что ты уже общаешься.",
+    by: "Женя, художник",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=ZhenyaAR&backgroundColor=be185d&textColor=ffffff",
   },
   {
     tempId: 14,
     testimonial:
-      "Я никогда не думала, что стану бегуном, но дружелюбный к новичкам подход Stride Collective сделал это возможным. Теперь не представляю жизни без бега.",
-    by: "Екатерина Орлова, позднее цветение",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=EkaterinaOrlova&backgroundColor=7c3aed&textColor=ffffff",
-  },
-  {
-    tempId: 15,
-    testimonial:
-      "Поддержка при травмах в Stride Collective потрясающая. Когда я выбыл, они поддерживали мою мотивацию и помогли вернуться сильнее.",
-    by: "Даниил Пак, история возвращения",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DaniilPak&backgroundColor=ea580c&textColor=ffffff",
-  },
-  {
-    tempId: 16,
-    testimonial:
-      "Благотворительные забеги Stride Collective придают нашим километрам смысл. Мы бежим не только для себя — мы бежим, чтобы изменить мир к лучшему.",
-    by: "Раиса Грин, чемпион благотворительности",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=RaisaGrin&backgroundColor=16a34a&textColor=ffffff",
-  },
-  {
-    tempId: 17,
-    testimonial:
-      "Мастер-классы по технике в Stride Collective преобразили мою беговую форму. Я стал быстрее и забыл о травмах благодаря экспертному руководству.",
-    by: "Кирилл Вонг, перфекционист формы",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=KirillVong&backgroundColor=2563eb&textColor=ffffff",
-  },
-  {
-    tempId: 18,
-    testimonial:
-      "Виртуальные забеги Stride Collective во время локдауна спасли мой рассудок. Даже когда мы не могли бегать вместе, мы оставались связаны как сообщество.",
-    by: "Александра Фостер, виртуальный воин",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlexandraFoster&backgroundColor=be185d&textColor=ffffff",
-  },
-  {
-    tempId: 19,
-    testimonial:
-      "Наставничество в Stride Collective меняет жизни. Опытные бегуны берут новичков под крыло и щедро делятся своей мудростью.",
-    by: "Карлос Мендес, благодарный ученик",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=CarlosMendez&backgroundColor=0891b2&textColor=ffffff",
+      "Первые 10 минут было страшновато. Потом как будто выключился внутренний критик — и я просто начала делать. Это ощущение я хочу переносить в жизнь.",
+    by: "Юля, копирайтер",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=YuliaCW&backgroundColor=7c3aed&textColor=ffffff",
   },
 ]
 
@@ -164,12 +129,15 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ position, testimonial
       className={cn(
         "absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out",
         isCenter
-          ? "z-10 bg-gray-900 text-white border-gray-900"
-          : "z-0 bg-white text-gray-900 border-gray-200 hover:border-gray-400",
+          ? "z-10"
+          : "z-0",
       )}
       style={{
         width: cardSize,
         height: cardSize,
+        background: isCenter ? "linear-gradient(135deg, #1a1520 0%, #140f18 100%)" : "#13101a",
+        borderColor: isCenter ? "#f0a14a" : "rgba(240,161,74,0.2)",
+        color: isCenter ? "#e8e4df" : "#8a8280",
         clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
         transform: `
           translate(-50%, -50%)
@@ -177,36 +145,37 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ position, testimonial
           translateY(${isCenter ? -65 : position % 2 ? 15 : -15}px)
           rotate(${isCenter ? 0 : position % 2 ? 2.5 : -2.5}deg)
         `,
-        boxShadow: isCenter ? "0px 8px 0px 4px hsl(var(--border))" : "0px 0px 0px 0px transparent",
+        boxShadow: isCenter ? "0px 8px 0px 4px rgba(240,161,74,0.15)" : "0px 0px 0px 0px transparent",
       }}
     >
       <span
-        className="absolute block origin-top-right rotate-45 bg-gray-300"
+        className="absolute block origin-top-right rotate-45"
         style={{
           right: -2,
           top: 48,
           width: SQRT_5000,
           height: 2,
+          background: isCenter ? "rgba(240,161,74,0.4)" : "rgba(240,161,74,0.1)",
         }}
       />
       <img
         src={testimonial.imgSrc || "/placeholder.svg"}
         alt={`${testimonial.by.split(",")[0]}`}
-        className="mb-4 h-14 w-12 bg-gray-100 object-cover object-top"
+        className="mb-4 h-14 w-12 object-cover object-top"
         style={{
-          boxShadow: "3px 3px 0px hsl(var(--background))",
+          background: "#2a2030",
+          boxShadow: "3px 3px 0px rgba(0,0,0,0.5)",
         }}
       />
-      <h3 className={cn("text-base sm:text-xl font-medium", isCenter ? "text-white" : "text-gray-900")}>
+      <h3 className={cn("text-base sm:text-xl font-medium", isCenter ? "" : "opacity-50")}
+        style={{ color: isCenter ? "#e8e4df" : "#8a8280" }}>
         "{testimonial.testimonial}"
       </h3>
       <p
-        className={cn(
-          "absolute bottom-8 left-8 right-8 mt-2 text-sm italic",
-          isCenter ? "text-gray-300" : "text-gray-600",
-        )}
+        className="absolute bottom-8 left-8 right-8 mt-2 text-sm italic"
+        style={{ color: isCenter ? "#f0a14a" : "rgba(240,161,74,0.4)" }}
       >
-        - {testimonial.by}
+        — {testimonial.by}
       </p>
     </div>
   )
