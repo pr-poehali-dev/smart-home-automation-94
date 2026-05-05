@@ -18,24 +18,8 @@ function useFadeIn() {
 export default function Index() {
   useFadeIn()
 
-  const marqueeText = "Живые встречи · каждые 2 недели · для всех"
-  const marqueeItems = Array(8).fill(marqueeText)
-
   return (
     <>
-      {/* MARQUEE */}
-      <div className="marquee-wrap">
-        <div className="marquee-track" aria-hidden="true">
-          {[...marqueeItems, ...marqueeItems].map((t, i) => (
-            <span className="marquee-item" key={i}>{t}</span>
-          ))}
-        </div>
-      </div>
-
-      {/* NAV */}
-      <nav className="imp-nav">
-        <a className="nav-cta" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">Записаться</a>
-      </nav>
 
       {/* HERO */}
       <section id="hero" style={{
