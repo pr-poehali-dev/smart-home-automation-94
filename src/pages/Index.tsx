@@ -163,7 +163,6 @@ export default function Index() {
               <ul className="tariff-list">
                 <li>Живая встреча, офлайн</li>
                 <li>2 часа игры и практики</li>
-                <li>Группа смешанная: новички и опытные рядом</li>
                 <li>Никакой подготовки не нужно</li>
               </ul>
               <p style={{ marginBottom: "1rem", fontSize: "0.9rem", color: "var(--muted)" }}>
