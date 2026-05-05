@@ -44,7 +44,6 @@ export default function Index() {
         <div className="container-imp" style={{ position: "relative", zIndex: 1 }}>
           <p className="hero-eyebrow fade-in">Живые встречи · каждые 2 недели · для всех</p>
           <h1 className="hero-title fade-in">
-            Ничего не готовь.<br />
             <em>Просто приходи.</em>
           </h1>
           <p className="hero-sub fade-in">
