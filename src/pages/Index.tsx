@@ -46,6 +46,7 @@ export default function Index() {
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.58)", zIndex: 0 }} />
         <div className="container-imp" style={{ position: "relative", zIndex: 1 }}>
+          <div style={{ display: "inline-block", background: "rgba(13,11,15,0.55)", backdropFilter: "blur(12px)", borderRadius: "16px", padding: "2.5rem 2.5rem 2rem", maxWidth: "700px" }}>
 
           <h1 className="hero-title fade-in">
             <em>Просто приходи.</em>
@@ -57,6 +58,7 @@ export default function Index() {
           <a className="btn-primary fade-in" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">
             Записаться на ближайшую встречу →&nbsp;15 мая · 1 000 ₽
           </a>
+          </div>
         </div>
       </section>
 
