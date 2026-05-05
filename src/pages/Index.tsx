@@ -31,14 +31,14 @@ export default function Index() {
   }
 
   const marqueeText = "Живые встречи · каждые 2 недели · для всех"
-  const marqueeItems = Array(12).fill(marqueeText)
+  const marqueeItems = Array(8).fill(marqueeText)
 
   return (
     <>
       {/* MARQUEE */}
       <div className="marquee-wrap">
-        <div className="marquee-track">
-          {marqueeItems.map((t, i) => (
+        <div className="marquee-track" aria-hidden="true">
+          {[...marqueeItems, ...marqueeItems].map((t, i) => (
             <span className="marquee-item" key={i}>{t}</span>
           ))}
         </div>

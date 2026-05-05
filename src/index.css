@@ -693,25 +693,36 @@ footer.imp-footer {
 .marquee-wrap {
   width: 100%;
   overflow: hidden;
-  background: #f0a14a;
-  padding: 0.7rem 0;
+  background: var(--accent);
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 .marquee-track {
   display: flex;
+  align-items: center;
   width: max-content;
-  animation: marquee 18s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 .marquee-track:hover {
   animation-play-state: paused;
 }
 .marquee-item {
   white-space: nowrap;
-  font-family: var(--font-body);
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
   font-weight: 600;
-  color: #0d0b0f;
-  padding: 0 2.5rem;
-  letter-spacing: 0.05em;
+  color: #1a0f00;
+  padding: 0 0;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.marquee-item::after {
+  content: "✦";
+  font-size: 0.7rem;
+  opacity: 0.6;
+  margin: 0 1.5rem;
 }
 @keyframes marquee {
   from {
