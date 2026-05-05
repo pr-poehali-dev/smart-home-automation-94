@@ -30,8 +30,20 @@ export default function Index() {
     setSubmitted(true)
   }
 
+  const marqueeText = "Живые встречи · каждые 2 недели · для всех"
+  const marqueeItems = Array(12).fill(marqueeText)
+
   return (
     <>
+      {/* MARQUEE */}
+      <div className="marquee-wrap">
+        <div className="marquee-track">
+          {marqueeItems.map((t, i) => (
+            <span className="marquee-item" key={i}>{t}</span>
+          ))}
+        </div>
+      </div>
+
       {/* NAV */}
       <nav className="imp-nav">
         <div className="nav-logo">Импровизация</div>
@@ -42,7 +54,7 @@ export default function Index() {
       <section id="hero">
         <div className="hero-bg-glow" />
         <div className="container-imp" style={{ position: "relative", zIndex: 1 }}>
-          <p className="hero-eyebrow fade-in">Живые встречи · каждые 2 недели · для всех</p>
+
           <h1 className="hero-title fade-in">
             <em>Просто приходи.</em>
           </h1>

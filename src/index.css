@@ -689,6 +689,39 @@ footer.imp-footer {
   margin: 0;
 }
 
+/* MARQUEE */
+.marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: #f0a14a;
+  padding: 0.7rem 0;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.marquee-item {
+  white-space: nowrap;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d0b0f;
+  padding: 0 2.5rem;
+  letter-spacing: 0.05em;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 640px) {
   nav.imp-nav .nav-cta {
     display: none;
