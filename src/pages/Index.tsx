@@ -260,7 +260,7 @@ export default function Index() {
               Следующая встреча —<br />
               <em>15 мая</em>
             </h2>
-            <p className="cta-meta fade-in">1 000 ₽ · Живая встреча · Без подготовки · Места ограничены</p>
+
             <div style={{ marginTop: "1.5rem" }} className="fade-in">
               <button className="btn-primary stretch">Записаться →</button>
             </div>
