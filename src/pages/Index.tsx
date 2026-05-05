@@ -165,7 +165,7 @@ export default function Index() {
                 📆 15 мая · Светланская 33/2
               </p>
               <button className="btn-primary" onClick={() => scrollTo("#cta-final")}>Записаться →</button>
-              <p className="tariff-note">Приходи как есть.</p>
+
             </div>
             <div className="tariff-card">
               <div className="tariff-label">Для компаний и событий</div>
