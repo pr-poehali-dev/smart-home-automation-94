@@ -51,7 +51,7 @@ export default function Index() {
           </h1>
 
           <a className="btn-primary fade-in" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">
-            Записаться на ближайшую встречу →&nbsp;15 мая · 1 000 ₽
+            ЗАПИСАТЬСЯ 15 МАЯ
           </a>
         </div>
       </section>
