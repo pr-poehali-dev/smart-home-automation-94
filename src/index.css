@@ -90,12 +90,77 @@ a {
 }
 
 .container-imp {
-  max-width: 1100px;
+  max-width: 860px;
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vw, 3rem);
+  text-align: center;
 }
 section.imp-section {
   padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+/* GLOBAL CENTER */
+.section-label,
+.section-title,
+.hero-eyebrow,
+.hero-sub,
+.pain-closing,
+.skills-closing,
+.step-text,
+.about-text,
+.review-text,
+.review-author,
+.cta-meta,
+.tariff-note,
+.tariff-list,
+.company-text,
+.about-facts,
+.about-role,
+.about-name {
+  text-align: center;
+  margin-inline: auto;
+}
+.pain-closing {
+  border-left: none;
+  padding-left: 0;
+  border-top: 2px solid var(--accent);
+  padding-top: 1.5rem;
+}
+.skills-grid {
+  justify-content: center;
+}
+.forwhom-list {
+  max-width: 700px;
+  margin-inline: auto;
+}
+.btn-primary {
+  margin-inline: auto;
+}
+.about-grid {
+  grid-template-columns: 1fr;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.about-photo {
+  max-width: 320px;
+  margin-inline: auto;
+}
+.tariff-grid {
+  max-width: 860px;
+  margin-inline: auto;
+}
+.reviews-grid {
+  max-width: 860px;
+  margin-inline: auto;
+}
+.steps {
+  max-width: 860px;
+  margin-inline: auto;
+}
+.cta-final-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* NAV */
@@ -142,9 +207,11 @@ nav.imp-nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 6rem;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 .hero-eyebrow {
   font-size: 0.8rem;
