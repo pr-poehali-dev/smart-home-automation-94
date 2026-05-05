@@ -47,9 +47,8 @@ export default function Index() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.58)", zIndex: 0 }} />
         <div className="container-imp" style={{ position: "relative", zIndex: 1 }}>
           <h1 className="hero-title fade-in">
-            <em>Просто приходи.</em>
+            Мастер-класс по<br /><em>Импровизации</em>
           </h1>
-          <h2 className="fade-in" style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "clamp(2rem, 1.2rem + 3vw, 5rem)", color: "var(--accent)", textAlign: "right", marginBottom: "1.5rem", lineHeight: 1.1 }}>Тебе понравится.</h2>
 
           <a className="btn-primary fade-in" href="https://t.me/ElenaOrekhovaa" target="_blank" rel="noopener noreferrer">
             Записаться на ближайшую встречу →&nbsp;15 мая · 1 000 ₽
