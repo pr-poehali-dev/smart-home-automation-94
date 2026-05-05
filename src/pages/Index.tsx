@@ -46,7 +46,7 @@ export default function Index() {
           <h1 className="hero-title fade-in">
             <em>Просто приходи.</em>
           </h1>
-          <p className="fade-in" style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "clamp(1.1rem, 0.9rem + 0.8vw, 1.5rem)", color: "var(--muted)", textAlign: "right", maxWidth: "18ch", marginBottom: "1.5rem" }}>Тебе понравится.</p>
+          <h2 className="fade-in" style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "clamp(2rem, 1.2rem + 3vw, 5rem)", color: "var(--accent)", textAlign: "right", marginBottom: "1.5rem", lineHeight: 1.1 }}>Тебе понравится.</h2>
           <p className="hero-sub fade-in">
             Импровизация — это игра, в которую невозможно прийти неподготовленным. Здесь нет правильных ответов. Есть только момент — и то, что ты в него принесёшь.
           </p>
