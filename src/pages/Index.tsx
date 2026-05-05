@@ -51,9 +51,7 @@ export default function Index() {
             Импровизация — это игра, в которую невозможно прийти неподготовленным. Здесь нет правильных ответов. Есть только момент — и то, что ты в него принесёшь.
           </p>
           <button className="btn-primary fade-in" onClick={() => scrollTo("#cta-final")}>
-            Записаться на ближайшую встречу →&nbsp;
-            <span className="tariff-placeholder">[дата]</span>
-            &nbsp;· 1 000 ₽
+            Записаться на ближайшую встречу →&nbsp;15 мая · 1 000 ₽
           </button>
         </div>
       </section>
@@ -172,7 +170,7 @@ export default function Index() {
                 <li>Никакой подготовки не нужно</li>
               </ul>
               <p style={{ marginBottom: "1rem", fontSize: "0.9rem", color: "var(--muted)" }}>
-                📆 Ближайшая дата: <span className="tariff-placeholder">[дата и адрес]</span>
+                📆 15 мая · Светланская 33/2
               </p>
               <button className="btn-primary" onClick={() => scrollTo("#cta-final")}>Записаться →</button>
               <p className="tariff-note">Приходи как есть.</p>
@@ -242,8 +240,8 @@ export default function Index() {
               <span>[ Живое фото<br />в процессе ]</span>
             </div>
             <div>
-              <div className="about-name"><span className="tariff-placeholder">[Имя]</span></div>
-              <div className="about-role"><span className="tariff-placeholder">[Роль / вектор]</span></div>
+              <div className="about-name">Елена Орехова</div>
+              <div className="about-role">Ведущая встреч по импровизации</div>
               <p className="about-text"><span className="tariff-placeholder">[Расскажи о себе: откуда импровизация в твоей жизни, почему тебе важно это делать]</span></p>
               <p className="about-text" style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "1.1rem", color: "var(--text)" }}>
                 «Я веду эти встречи потому что… <span className="tariff-placeholder">[продолжение]</span>»
@@ -267,7 +265,7 @@ export default function Index() {
             <p className="section-label fade-in">Запись</p>
             <h2 className="section-title fade-in">
               Следующая встреча —<br />
-              <span className="tariff-placeholder">[дата]</span>
+              <em>15 мая</em>
             </h2>
             <p style={{ color: "var(--muted)", marginBottom: "0.5rem" }} className="fade-in">
               Оставь имя и контакт — я пришлю адрес и все детали.
