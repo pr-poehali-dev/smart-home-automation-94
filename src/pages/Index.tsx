@@ -38,8 +38,13 @@ export default function Index() {
       </nav>
 
       {/* HERO */}
-      <section id="hero">
-        <div className="hero-bg-glow" />
+      <section id="hero" style={{
+        backgroundImage: "url(https://cdn.poehali.dev/projects/13b0f725-9de0-4f7a-9e7b-95c3b58756f7/bucket/fc52caeb-067f-49bd-bb1f-a9d980846534.jpeg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.58)", zIndex: 0 }} />
         <div className="container-imp" style={{ position: "relative", zIndex: 1 }}>
 
           <h1 className="hero-title fade-in">
