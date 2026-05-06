@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import ReviewsCarousel from "@/components/ReviewsCarousel"
 
 function useFadeIn() {
   useEffect(() => {
@@ -183,29 +184,7 @@ export default function Index() {
         <div className="container-imp">
           <p className="section-label fade-in">Отзывы</p>
           <h2 className="section-title fade-in">Что говорят после</h2>
-          <div className="reviews-grid fade-in">
-            <div className="review-card">
-              <p className="review-text">«Пришла зажатой, думала — буду стоять в стороне. Ушла с ощущением, что умею всё.»</p>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                <img src="https://cdn.poehali.dev/projects/13b0f725-9de0-4f7a-9e7b-95c3b58756f7/files/d1221e31-636f-437d-b9a7-718e50526fff.jpg" alt="Марина" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
-                <p className="review-author">— Марина, 29 лет</p>
-              </div>
-            </div>
-            <div className="review-card">
-              <p className="review-text">«Я думал, что это "не моё". Первые 10 минут смеялся над собой. Потом просто забыл стесняться.»</p>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                <img src="https://cdn.poehali.dev/projects/13b0f725-9de0-4f7a-9e7b-95c3b58756f7/files/948f9bb1-b948-4a66-bb99-3526e42e0d35.jpg" alt="Алексей" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
-                <p className="review-author">— Алексей, 34 года</p>
-              </div>
-            </div>
-            <div className="review-card">
-              <p className="review-text">«Два часа — и вышла другим человеком. Не знаю как объяснить. Просто тело стало легче.»</p>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                <img src="https://cdn.poehali.dev/projects/13b0f725-9de0-4f7a-9e7b-95c3b58756f7/files/9686db97-0ca2-4df8-909d-e2ec0ad67e8c.jpg" alt="Катя" style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
-                <p className="review-author">— Катя, 26 лет</p>
-              </div>
-            </div>
-          </div>
+          <ReviewsCarousel />
         </div>
       </section>
 

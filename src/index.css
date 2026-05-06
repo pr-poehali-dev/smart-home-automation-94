@@ -577,35 +577,105 @@ nav.imp-nav {
   line-height: 1.65;
 }
 
-/* REVIEWS */
-.reviews-grid {
-  display: grid;
-  gap: 1.25rem;
+/* REVIEWS CAROUSEL */
+.reviews-carousel-wrap {
   margin-block: 2.5rem;
+  max-width: 640px;
+  margin-inline: auto;
+  user-select: none;
 }
-@media (min-width: 640px) {
-  .reviews-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.review-card {
-  padding: 1.75rem;
+.reviews-carousel-card {
   background: var(--surface);
   border: 1px solid var(--border-imp);
   border-radius: var(--r);
+  padding: 2.5rem 2rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  will-change: opacity, transform;
 }
 .review-text {
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.35rem);
   font-style: italic;
   color: var(--text);
-  line-height: 1.65;
-  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+.review-author-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--border-imp);
 }
 .review-author {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--muted);
   font-weight: 500;
+  text-align: left;
+}
+.reviews-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.carousel-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-imp);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color var(--transition),
+    color var(--transition),
+    background var(--transition);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.carousel-btn:hover {
+  border-color: rgba(240, 161, 74, 0.5);
+  color: var(--accent);
+  background: var(--surface2);
+}
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--faint);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    transform var(--transition),
+    width var(--transition);
+}
+.carousel-dot.active {
+  background: var(--accent);
+  width: 20px;
+  border-radius: 4px;
 }
 
 /* ABOUT */
